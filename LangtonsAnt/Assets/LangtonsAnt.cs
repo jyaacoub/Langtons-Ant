@@ -8,7 +8,6 @@ using UnityEngine.Tilemaps;
 
 public class LangtonsAnt : MonoBehaviour
 {
-    public float speed = 128;
     public float tileSize = GridManager.tileSize;
 
     // Start is called before the first frame update
@@ -18,10 +17,16 @@ public class LangtonsAnt : MonoBehaviour
         transform.position += new Vector3(tileSize / 2, 0, 0);
     }
 
-    private void moveAnt()
+    void moveRight()
     {
-        
+
     }
+
+    void moveLeft()
+    {
+
+    }
+
 
     // Update is called once per frame
     void Update()
