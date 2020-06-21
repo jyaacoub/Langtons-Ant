@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - tiles
+  - ant
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: tiles
+    uniqueID: 3115003301
+    locked: 0
+  - name: ant
+    uniqueID: 1038701653
     locked: 0

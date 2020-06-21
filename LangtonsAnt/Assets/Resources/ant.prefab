@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8832631986040338392}
   - component: {fileID: 1173205289265934455}
+  - component: {fileID: 8702900477430932132}
   - component: {fileID: 7834826330156251037}
   m_Layer: 9
   m_Name: ant
@@ -81,6 +82,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8702900477430932132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581471376460859400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793f8d275f3f5744b4d859d5fab05da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7834826330156251037
 MonoBehaviour:
   m_ObjectHideFlags: 0

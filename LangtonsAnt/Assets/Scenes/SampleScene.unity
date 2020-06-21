@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ant
       objectReference: {fileID: 0}
+    - target: {fileID: 5581471376460859400, guid: b252f70f5fccb9b498eaab7e11a516d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8832631986040338392, guid: b252f70f5fccb9b498eaab7e11a516d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,6 +275,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1173205289265934455, guid: b252f70f5fccb9b498eaab7e11a516d3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1038701653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173205289265934455, guid: b252f70f5fccb9b498eaab7e11a516d3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b252f70f5fccb9b498eaab7e11a516d3, type: 3}
 --- !u!1 &2032577997
@@ -282,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032577999}
   - component: {fileID: 2032577998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094bf8a13438214488b97416ff82b84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 5
+  rows: 8
   cols: 8
 --- !u!4 &2032577999
 Transform:

@@ -34,6 +34,7 @@ public class GridManager : MonoBehaviour
 
                 tile.transform.position = new Vector2(posX, posY);
                 tile.AddComponent<BoxCollider>();
+                tile.GetComponent<Renderer>().material.color = Color.grey;
             }
         }
 
