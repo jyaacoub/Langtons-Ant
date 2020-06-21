@@ -11,7 +11,7 @@ public class GridManager : MonoBehaviour
     [SerializeField]
     private int cols = 8;
     [SerializeField]
-    public static float tileSize = 1.02f;
+    public static float tileSize = 1f;
 
     // Start is called before the first frame update
     void Start()
