@@ -33,6 +33,7 @@ public class GridManager : MonoBehaviour
                 float posY = row * -tileSize;
 
                 tile.transform.position = new Vector2(posX, posY);
+                tile.AddComponent<BoxCollider>();
             }
         }
 
