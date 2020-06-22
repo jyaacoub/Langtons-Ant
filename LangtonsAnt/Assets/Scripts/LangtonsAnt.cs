@@ -90,23 +90,57 @@ public class LangtonsAnt : MonoBehaviour
                 break;
         }       
     }
+    
+    private GameObject getCurrTile()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 0.25f);
+        GameObject currTile;
+
+        // Create a new tile if there are none there:
+        if (colliders.Length == 0)
+        {
+            currTile = (GameObject)Instantiate(Resources.Load("tile_white"));
+
+            currTile.transform.position = transform.position;
+            currTile.AddComponent<BoxCollider>();
+            currTile.GetComponent<Renderer>().material.color = Color.grey;
+        } 
+        else
+        {
+            currTile = colliders[0].gameObject;
+        }
+        
+        return currTile;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject currTile = Physics.OverlapSphere(this.transform.position, 0.25f)[0].gameObject;
+        GameObject currTile = getCurrTile();
         Color tileColor = currTile.GetComponent<Renderer>().material.color;
 
         if (tileColor == Color.white || tileColor == Color.grey)
         {
-            // if it reaches a white square it changes it to red and turns left.
             recolorTile(Color.red, currTile);
-            move("left");
-
+            move("right");                           
         } 
         else if (tileColor == Color.red)
+        {         
+            recolorTile(Color.green, currTile);
+            move("right");
+        }
+        else if (tileColor == Color.green)
         {
-            // if it reaches a red square it changes it to white and turns right.
+            recolorTile(Color.blue, currTile);
+            move("right");
+        }
+        else if (tileColor == Color.blue)
+        {
+            recolorTile(Color.yellow, currTile);
+            move("left");
+        }
+        else if (tileColor == Color.yellow)
+        {
             recolorTile(Color.white, currTile);
             move("right");
         }
