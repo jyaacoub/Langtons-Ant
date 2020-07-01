@@ -5,11 +5,15 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class LangtonsAnt : MonoBehaviour
 {
     public float tileSize = GridManager.tileSize;
 
+    private Color darkRed = new Color(0.360f, 0.035f, 0);
+    private Color darkGreen = new Color(0, 0.282f, 0);
+    private Color pukeGreen = new Color(0.309f, 0.286f, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -103,7 +107,7 @@ public class LangtonsAnt : MonoBehaviour
 
             currTile.transform.position = transform.position;
             currTile.AddComponent<BoxCollider>();
-            currTile.GetComponent<Renderer>().material.color = Color.grey;
+            currTile.GetComponent<Renderer>().material.color = Color.white;
         } 
         else
         {
@@ -119,10 +123,10 @@ public class LangtonsAnt : MonoBehaviour
         GameObject currTile = getCurrTile();
         Color tileColor = currTile.GetComponent<Renderer>().material.color;
 
-        if (tileColor == Color.white || tileColor == Color.grey)
+        if (tileColor == Color.white)
         {
             recolorTile(Color.red, currTile);
-            move("right");                           
+            move("left");                           
         } 
         else if (tileColor == Color.red)
         {         
@@ -131,19 +135,50 @@ public class LangtonsAnt : MonoBehaviour
         }
         else if (tileColor == Color.green)
         {
+            recolorTile(Color.cyan, currTile);
+            move("right");
+        }
+        else if (tileColor == Color.cyan)
+        {
+            recolorTile(Color.yellow, currTile);
+            move("right");
+        }
+        else if (tileColor == Color.yellow)
+        {
+            recolorTile(Color.magenta, currTile);
+            move("right");
+        }
+        else if (tileColor == Color.magenta)
+        {
+            recolorTile(Color.grey, currTile);
+            move("left");
+        }
+        else if (tileColor == Color.grey)
+        {
+            recolorTile(darkRed, currTile);
+            move("left");
+        }
+        else if (tileColor == darkRed)
+        {
+            recolorTile(darkGreen, currTile);
+            move("left");
+        }
+        else if (tileColor == darkGreen)
+        {
             recolorTile(Color.blue, currTile);
             move("right");
         }
         else if (tileColor == Color.blue)
         {
-            recolorTile(Color.yellow, currTile);
+            recolorTile(pukeGreen, currTile);
             move("left");
         }
-        else if (tileColor == Color.yellow)
+        else if (tileColor == pukeGreen)
         {
             recolorTile(Color.white, currTile);
             move("right");
         }
+
 
         //if (Input.GetKeyDown(KeyCode.RightArrow))
         //{
